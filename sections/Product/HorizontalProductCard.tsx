@@ -23,6 +23,7 @@ export function loader(props: HorizontalProductSectionProps, _req: Request) {
   return props;
 }
 
+// Para testar o ErrorFallback
 // export function loader(props) {
 //   throw new Error();
 
@@ -71,17 +72,17 @@ export function LoadingFallback() {
 export function ErrorFallback({ error: _error, ...props }: { error?: Error }) {
   console.log(props);
   return (
-    <div class="flex flex-col mx-auto max-w-96">
+    <div class="flex flex-col mx-auto max-w-96 gap-3">
       <img
         src={asset("/image/moqueca.jpg")}
-        alt={"a"}
+        alt={"moqueca"}
         height={400}
         width={400}
       />
-      <p>dasdasd</p>
-      <p>ddasdasdas</p>
+      <p class={"font-bold "}>Moqueca capixaba</p>
+      <p>A verdadeira</p>
       <a href="/cultura" class="btn btn-block">
-        "Para Saber mais"
+        Para saber mais
       </a>
     </div>
   );
