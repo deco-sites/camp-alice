@@ -40,7 +40,7 @@ const HorizontalProductSection = ({
   return (
     <div
       class={clx(
-        "container flex items-center justify-center gap-x-4 flex-wrap py-4 w-full bg-neutral-content p-2 sm:p-4 md:p-6 rounded-xl",
+        "container flex items-center justify-center gap-x-4 flex-wrap py-4 w-full bg-neutral-content p-2 sm:p-4 md:p-6 rounded-xl ",
         layout,
       )}
     >
@@ -70,7 +70,6 @@ export function LoadingFallback() {
 }
 
 export function ErrorFallback({ error: _error, ...props }: { error?: Error }) {
-  console.log(props);
   return (
     <div class="flex flex-col mx-auto max-w-96 gap-3">
       <img

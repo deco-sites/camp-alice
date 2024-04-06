@@ -1,7 +1,6 @@
 {
   "imports": {
     "deco-sites/camp-alice/": "./",
-
     "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.60.11/",
     "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.35.25/",
     "$fresh/": "https://deno.land/x/fresh@1.6.5/",
@@ -12,7 +11,11 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
     "std/": "https://deno.land/std@0.190.0/",
     "partytown/": "https://cdn.jsdelivr.net/gh/deco-cx/partytown@0.4.8/",
-    "daisyui": "npm:daisyui@4.6.0"
+    "daisyui": "npm:daisyui@4.6.0",
+    "$store/": "./",
+    "$islands/": "./islands/",
+    "$sdk/": "./sdk/",
+    "$components/": "./components/"
   },
   "tasks": {
     "start": "deno task generate-icons && deno task bundle && deno run -A --unstable --env --watch=tailwind.css,sections/,functions/,loaders/,actions/,workflows/,accounts/,.env dev.ts",
