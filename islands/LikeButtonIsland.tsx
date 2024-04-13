@@ -5,6 +5,7 @@ import { total } from "deco-sites/camp-alice/sdk/useTotalLikes.ts";
 import { useEffect } from "preact/hooks";
 import { SendEventOnClick } from "$store/components/Analytics.tsx";
 import { useId } from "$store/sdk/useId.ts";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 export interface LikeButtonIslandProps {
   productID: string;
 }
@@ -34,7 +35,21 @@ function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
     selected.value = true;
     total.value = result.total;
     quantity.value = result.product;
+
+    toast.success("👍 Curtiu!", {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
+
+  const Toast = ToastContainer as any;
 
   const id = useId();
 
@@ -68,6 +83,8 @@ function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
           },
         }}
       />
+
+      <Toast />
     </button>
   );
 }
