@@ -49,6 +49,7 @@ function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
     });
   };
 
+  // deno-lint-ignore no-explicit-any
   const Toast = ToastContainer as any;
 
   const id = useId();
