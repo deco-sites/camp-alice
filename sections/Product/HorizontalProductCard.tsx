@@ -81,7 +81,7 @@ export function ErrorFallback({ error: _error, ...props }: { error?: Error }) {
       />
       <p class={"font-bold "}>Moqueca capixaba</p>
       <p>A verdadeira</p>
-      <a href="/cultura" class="btn btn-block">
+      <a href="/culturas" class="btn btn-block">
         Para saber mais
       </a>
     </div>
